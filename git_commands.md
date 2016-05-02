@@ -27,7 +27,7 @@
 ######GIT man command
    display the manual i.e $ man man or $ man help etc
    
-####### Initializing ,adding ,commiting, and Status commands
+#######Initializing ,adding ,commiting, and Status commands
     git init                            // how to intialize or start tracking a folder or a repository
     
     git add file-name                   // to add a single file into staging index
@@ -40,7 +40,7 @@
     
     git status                          // viewing the status 
 
-###### Working with the staging environment, reverting commited files
+######Working with the staging environment, reverting commited files
     git checkout index.html             // to undo changes in the working directory
     
     git checkout -- fileName            // to undo changes -- means to stay in the same branch
@@ -58,7 +58,7 @@
 
 
     
-####### The GIT log command (viewing the commit log)
+#######The GIT log command (viewing the commit log)
     git log
     
     git log -n 5                        // to view / show the last 5 commits
