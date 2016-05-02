@@ -54,6 +54,29 @@
 
     git revert SHA-1                    // reverting a commit
 
+    git rm --cached filename            // to ignore already tracked file
+
+######Dangerous and power full reset command to reset multiple commits
+    git reset --soft SHA-1              // the safe way --soft only change the pointer
+
+    git reset --mixed SHA-1             // mixed way --mixed change the staging index to match repository
+                                        // does not change working repository
+
+    git reset --hard SHA-1              // hard way --hard changing staging and working directory both to match repository
+
+######Removing untracked files
+    git clean -n                        // this will remove files from staging index to working directory to be ready for                                       // removal
+    
+    git clean -f                        // this will remove all the working directory files
+
+    git rm --cached filename            // to ignore already tracked file
+
+
+
+
+
+
+
     
 
 
@@ -95,6 +118,130 @@
     
     git log show SHA-1
     
+######Comparing commits
+    git diff SHA-1
+    
+    git diff SHA-1..SHA-1
+    
+    git diff --stat --summary SHA-1..SHA-1
+ 
+    git diff -b SHA-1..SHA-1
 
+    git diff -w SHA-1..SHA-1
+
+######Viewing changes with diff comparing versions
+    git diff
+
+    git diff filename.txt
+
+    git diff color-words filename
+
+    git diff -w
     
+######Viewing changes that are already staged
+    git diff --staged
+
+######How git track the changes
+    using SHA-1 or checksum Algorithm
+    SHA-1 is a 40 hexadecimal string (0-9 a-f)
+
+######HEAD in git : lets know a bit more about HEAD in GIT
+    HEAD always point to the last commit in the repository
     
+    git log HEAD                                // will display the last SHA-1
+
+######div deep in HEAD
+    cat HEAD                                    [result refs/heads/master]
+
+    cd refs
+
+    cd heads
+
+    cat master                                  [will be always showing the last commit HEAD]    
+
+######Deleting files
+    git rm file-name.extension
+
+    git commit -m "deletion message"    
+    
+######Moving and renaming files
+    git mv original-file-name new-file-name
+    
+######Pushing local repository into github
+    git remote add <alias> <url>
+
+    git remote add origin https://github.com/Avenger4568/git-practice.git
+
+    git remote
+
+    git remote -v
+
+######Branching
+    git branch
+ 
+    git branch -r // will show the remote branches
+
+    git branch -a // will show both local and remote
+
+######Information about branches are always stored in heads directory
+    cat .git/refs/heads
+
+######Creating a new branch
+    git branch new-branch-name
+
+######Switching branches or checking out new branch
+    git checkout branch-name                                // active branch name
+
+######Creating and switching branch in a single command
+    git checkout -b branch-
+
+######Comparing branches
+    git diff branch..branch
+
+######The best way to check changes that are merged is:
+    git branch --merged
+
+######Renaming branch
+    git branch -m old-name new-name
+
+######Deleting branch
+    git branch -d branch name
+
+    git branch -D branch name                               // forcing deleteion without alert
+    
+######Merging branches make sure you are on the receiving branch.
+    git merge branch-name (this is fast merge)
+
+    git merge --no-ff branch-name                           //no fast merge good if you want to add documentation
+    
+######Aborting the merge incase of conflict
+    git merge --abort
+
+######Can also see where git stores these info
+    cat .git/config
+
+######Removing the remote repository
+    git remote rm origin
+
+#####To push changes to remote repository or creating a remote branch
+    git push -u origin master
+
+######Stashing changes
+    git stash save "message"
+
+######Viewing remote stash
+    git stash list
+    
+    git stash show stash@{0}
+
+    git stash show -p stash@{0}
+
+    git stash pop stash@{index}
+
+######Retrieving stashed changes
+    git stash pop stash@{index} // or apply
+
+######Deleting stashed changes
+    git stash drop stash@{index}
+
+    git stash clear
