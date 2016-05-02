@@ -20,4 +20,9 @@
     git help "command name"
     
 ######GIT man command
-   display the manual
+   display the manual i.e $ man man or $ man help etc
+   
+####### Initializing ,adding ,commiting, and Status commands
+    git init                // how to intialize or start tracking a folder or a repository
+    git add file-name       // add a file to staging environment
+    
