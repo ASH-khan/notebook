@@ -5,3 +5,9 @@
 <p>git config --global user.email "email"</p>
 <p>git config --global core.editor "atom -wl1"</p>
 <p>git config --global color.ui true</p>
+
+###GIT Autocompletion script
+    curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
+
+
+
