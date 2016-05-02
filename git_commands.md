@@ -39,6 +39,24 @@
     git commit -am "a good message"     // adding and commiting from staging index into repository in one shot
     
     git status                          // viewing the status 
+
+###### Working with the staging environment, reverting commited files
+    git checkout index.html             // to undo changes in the working directory
+    
+    git checkout -- fileName            // to undo changes -- means to stay in the same branch
+    
+    git reset HEAD fileName             // to undo / unstage changes from staging index back into working directory
+    
+    git commit --amend -m "message"     // amending the last commit adding the changes to the last commit.
+    
+    git checkout SHA-1 filename         // SHA-1 must be the first 8 or 10 characters of the commit you want to retrieve
+                                        // retrieving older version of file
+
+    git revert SHA-1                    // reverting a commit
+
+    
+
+
     
 ####### The GIT log command (viewing the commit log)
     git log
