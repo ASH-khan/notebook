@@ -20,3 +20,4 @@
     git help "command name"
     
 ######GIT man command
+   display the manual
