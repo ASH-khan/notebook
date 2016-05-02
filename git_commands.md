@@ -9,5 +9,12 @@
 ###GIT Autocompletion script
     curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
 
+###rename and hide the auto completion file
+    mv ~/git-completion.bash ~/.git-completion.bash
+
+###To make the auto completion file work add the following script into .bash_profile
+    if [ -f ~/.git-completion.bash ]; then
+      source ~/.git-completion.bash
+      fi
 
 
