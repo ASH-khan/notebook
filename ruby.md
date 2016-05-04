@@ -11,6 +11,6 @@ born in japan 1995.
     
 # Using Ruby:
 there are three ways to use ruby:
-*Single command
-*Ruby file
-*IRB (Interactive Ruby shell)
+*.Single command
+*.Ruby file
+*.IRB (Interactive Ruby shell)
